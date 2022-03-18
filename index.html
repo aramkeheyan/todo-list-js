@@ -1,72 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="style.css"/>
     <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-      crossorigin="anonymous"
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+            integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+            crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon"/>
     <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-      .form-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        position: relative;
-        height: 64px;
-      }
-      .form-item > button {
-        border: none;
-        background: white;
-        padding: 0 1em;
-        height: 100%;
-        font-size: 2em;
-      }
-      .form-item:hover > button {
-        display: block;
-      }
-      .hide {
-        display: none;
-      }
+        .form-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: relative;
+            height: 64px;
+        }
+
+        .form-item > button {
+            border: none;
+            background: white;
+            padding: 0 1em;
+            height: 100%;
+            font-size: 2em;
+        }
+
+        .form-item:hover > button {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
     </style>
     <title>todos</title>
-  </head>
-  <body>
-    <h1 class="header-h1">todos</h1>
-    <div id="main">
-      <form id="mainForm" >
-        <input name="textInput" type="text" id="mainInput" placeholder="What needs to be done?" autocomplete="off" />
+</head>
+<body>
+<h1 class="header-h1">todos</h1>
+<div id="main">
+    <form id="mainForm">
+        <input name="textInput" type="text" id="mainInput" placeholder="What needs to be done?" autocomplete="off"/>
         <i class="fas fa-chevron-down" id="selectArrow"></i>
-      </form>
-      <!-- dynamically appends forms -->
-
-      <!-- dynamically appends forms -->
-      <div id="bottomMenu" class="hide">
-        <p id="elementsCount"></p>
-        <input type="radio" name="status" value="All" checked />
-        <input type="radio" name="status" value="Active" />
-        <input type="radio" name="status" value="Completed" />
-        <button id="clearChecked" class="hide">Clear completed</button>
-      </div>
-    </div>
-
-    <form id="myForm" name="myForm" action="#" class="create-todo form-item for-clone hide">
-      <input name="checkbox" type="checkbox" />
-      <input name="textInput" type="text" class="textInput" disabled  />
-      <button id="delBtn" name="btn" type="button" class="hide">x</button>
     </form>
-    <script src="main.js"></script>
-    <!-- <script src="script.js"></script> -->
-  </body>
+    <!-- dynamically appends forms -->
+
+    <!-- dynamically appends forms -->
+    <div id="bottomMenu" class="hide">
+        <p id="elementsCount"></p>
+        <label for="all">All</label>
+        <input type="radio" id="all" name="status" value="all" checked/>
+        <label for="active">Active</label>
+        <input type="radio" id="active" name="status" value="active"/>
+        <label for="completed">Completed</label>
+        <input type="radio" id="completed" name="status" value="completed"/>
+        <button id="clearChecked" class="hide">Clear completed</button>
+    </div>
+</div>
+
+<form name="myForm" action="#" class="create-todo form-item for-clone hide">
+    <input name="checkbox" type="checkbox"/>
+    <input name="textInput" type="text" class="textInput" disabled/>
+    <button id="delBtn" name="btn" type="button" class="hide">x</button>
+</form>
+<script src="main.js"></script>
+<!-- <script src="script.js"></script> -->
+</body>
 </html>
